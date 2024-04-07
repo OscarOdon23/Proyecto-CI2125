@@ -2,7 +2,7 @@ import pandas as pd
 import time
 
 # Función para simular un parcial
-def simular_parcial1():
+def simular_parcial(numero_parcial):
     # Cargar preguntas desde CSV
     preguntas1 = pd.read_csv(f'parcial1.csv', sep='\;')
     
@@ -86,15 +86,14 @@ while True:
     
     if opcion == "1":
         num_parcial = input("Seleccione el número de parcial (1, 2 o 3): ")
-        if opcion == 1:
-            simular_parcial1()
-        elif opcion == 2:
-            simular_parcial2()
-        elif opcion == 3:
-            simular_parcial3()
+        if opcion == "1":
+            simular_parcial(num_parcial)
+        elif opcion == "2":
+            simular_parcial2(num_parcial)
+        elif opcion == "3":
+            simular_parcial3(num_parcial)
         else: 
            print("Opcion no valida. Debes elegir entre 1, 2 o 3")
-        return None
     elif opcion == "2":
         num_parcial = input("Seleccione el número de parcial (1, 2 o 3): ")
         resumen_teorico(num_parcial)
