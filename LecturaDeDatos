@@ -86,12 +86,15 @@ while True:
     
     if opcion == "1":
         num_parcial = input("Seleccione el número de parcial (1, 2 o 3): ")
-        if opcion == "1":
-        simular_parcial1()
-        elif opcion == "2":
-        simular_parcial2()
-        elif opcion == "3":
-        simular_parcial3()
+        if opcion == 1:
+            simular_parcial1()
+        elif opcion == 2:
+            simular_parcial2()
+        elif opcion == 3:
+            simular_parcial3()
+        else: 
+           print("Opcion no valida. Debes elegir entre 1, 2 o 3")
+        return None
     elif opcion == "2":
         num_parcial = input("Seleccione el número de parcial (1, 2 o 3): ")
         resumen_teorico(num_parcial)
